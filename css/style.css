@@ -101,10 +101,10 @@ ul {
 	display: block;
 	width: 100%;
 	height: 4px;
-	transform: translateY(700%);
+	bottom: -33px;
 	border-radius: 2px;
 	background-color: #2196f3;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .active-portfolio::after {
@@ -113,13 +113,11 @@ ul {
 	display: block;
 	width: 100%;
 	height: 4px;
-	transform: translateY(700%);
+	bottom: -33px;
 	border-radius: 2px;
 	background-color: #2196f3;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
-
-
 
 /* header div */
 
@@ -140,7 +138,7 @@ ul {
 .link-grey {
 	text-decoration: none;
 	color: var(--gray);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .icon-mail {
@@ -193,14 +191,13 @@ a.link-grey {
 	border-radius: 4px;
 	border-color: var(--white);
 	cursor: pointer;
-	transition: background-color, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-Vector{
+.icon-Vector {
 	width: 11px;
 	height: 11px;
 }
-
 
 /* main center index */
 
@@ -254,6 +251,7 @@ a.link-grey {
 	padding-bottom: 30px;
 	list-style: none;
 	--color3: #afb1b8;
+	transition: var(--color3) 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social-links li {
@@ -264,13 +262,13 @@ a.link-grey {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links li:hover,
 .social-links li:focus {
 	--color3: var(--white);
 	background-color: var(--color-blue);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* main what-we-do */
@@ -307,6 +305,7 @@ a.link-grey {
 	width: 370px;
 	height: 70px;
 	padding: 27px 0;
+	margin-top: -75px;
 
 	font-weight: 700;
 	font-size: 14px;
@@ -317,7 +316,6 @@ a.link-grey {
 	color: #fff;
 	background-color: rgba(47, 48, 58, 0.8);
 	z-index: 2;
-	transform: translateY(-127%);
 }
 
 /* main our-team */
@@ -345,6 +343,8 @@ a.link-grey {
 	border-radius: 0px 0px 4px 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	background-color: var(--white);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+	
 }
 .photos {
 	margin: 0;
@@ -390,13 +390,14 @@ a.link-grey {
 	width: 170px;
 	height: 92px;
 	border: 1px solid #afb1b8;
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	
 }
 
 .our-customers li:hover {
-	--color4: var(--color-blue);
-	--color2: var(--color-blue);
+	 --color4: var(--color-blue); 
+	 --color2: var(--color-blue); 
 	border-color: var(--color-blue);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -436,6 +437,7 @@ a.link-grey {
 	line-height: 1.71;
 	font-style: inherit;
 	color: var(--shadowgray);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .footer-contact a {
@@ -495,6 +497,7 @@ a.footer-social-links {
 }
 .footer-social-links li:hover {
 	background-color: var(--color-blue);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /* portfolio */
@@ -524,7 +527,7 @@ a.footer-social-links {
 	border: 0;
 	cursor: pointer;
 	background-color: var(--vlight-gray);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* div flex */
@@ -587,7 +590,7 @@ a.footer-social-links {
 	background-color: rgba(33, 150, 243, 0.9);
 
 	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-item:hover .overlay {
@@ -604,7 +607,7 @@ a.footer-social-links {
 .link-grey-footer:focus {
 	text-decoration: none;
 	color: var(--color-blue);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-grey:hover,
@@ -650,6 +653,7 @@ a.footer-social-links {
 	height: 581px;
 	transform: translate(-50%, -50%);
 	background-color: var(--white);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .close-btn {
